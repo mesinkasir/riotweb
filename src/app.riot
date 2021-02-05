@@ -1,0 +1,116 @@
+<app>
+<div class="text-center bg-danger p-3 p-md-5"><a href="/" class="btn btn-light rounded-circle">
+<img src="https://riot.js.org/img/logo/square.svg" width="60"/></a></div>
+    <nav class="menu navbar bg-light border-bottom p-3">
+          <a
+            each={page in state.pages}
+            class={state.activePage === page ? 'active' : '' }
+            href={page.path}>
+            {page.label}
+          </a>
+        </nav>
+  <div class="container">
+    <router>
+      <div class="row">
+      </div>
+      <div if={state.showNotFound} class="row">
+        <div class="col-12 col-md-12 p-3 p-md-5">
+          <not-found />
+        </div>
+      </div>
+      <div if={!state.showNotFound} class="row">
+        <div class="col-12 col-md-12 p-3 p-md-5">
+          <route each={page in state.pages} path={page.path}>
+            <main is={page.componentName}/>
+          </route>
+        </div>
+        <!-- notice how <sidebar> is registered as global component -->
+        <div class="col-12 col-md-12">
+          <sidebar/>
+        </div>
+      </div>
+    </router>
+  </div>
+
+  <script>
+    import { Router, Route, route, toRegexp, match } from '@riotjs/route'
+    import lazy from '@riotjs/lazy'
+    import Loader from './components/includes/loader/loader.riot'
+    import NotFound from './pages/not-found.riot'
+    import pages from './pages'
+
+    export default {
+      components: {
+        Router,
+        Route,
+        NotFound,
+        Home: lazy(Loader, () => import(
+          /* webpackPrefetch: true, webpackChunkName: 'pages/home' */
+          './pages/home.riot'
+        )),
+        About: lazy(Loader, () => import(
+          /* webpackPrefetch: true, webpackChunkName: 'pages/about' */
+          './pages/about.riot'
+        )),
+        Profile: lazy(Loader, () => import(
+          /* webpackPrefetch: true, webpackChunkName: 'pages/profile' */
+          './pages/profile.riot'
+        )),
+        Info: lazy(Loader, () => import(
+          /* webpackPrefetch: true, webpackChunkName: 'pages/info' */
+          './pages/info.riot'
+        )),
+        Gallery: lazy(Loader, () => import(
+          /* webpackPrefetch: true, webpackChunkName: 'pages/gallery' */
+          './pages/gallery.riot'
+        )),
+      },
+      state: {
+        pages,
+        showNotFound: false,
+        activePage: null
+      },
+      onBeforeMount({ isServer }) {
+        // create a stream on all routes to catch the not-found page
+        this.anyRouteStream = route('(.*)')
+        this.anyRouteStream.on.value(this.onAnyRoute)
+      },
+      onAnyRoute(path) {
+        // show the not found page if none of the page paths are matched
+        const activePage = pages.find(p => match(path.pathname, toRegexp(p.path)))
+
+        this.update({
+          activePage,
+          showNotFound: !activePage
+        })
+      },
+      onBeforeUnmout() {
+        this.anyRouteStream.end()
+      }
+    }
+  </script>
+
+  <style>
+    :host {
+      padding: 0rem 0;
+    }
+
+    .menu {
+      margin: 1rem -1rem;
+    }
+
+    .menu a {
+      padding: 0 1rem;
+      color: black;
+    }
+
+    .menu a.active.active {
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .menu a:hover, .menu a:focus, .menu a:active {
+      text-decoration: underline;
+    }
+  </style>
+</app>

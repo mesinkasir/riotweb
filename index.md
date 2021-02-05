@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+# RIOT WEBSITE APP
 
-You can use the [editor on GitHub](https://github.com/mesinkasir/riotweb/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+![single page app website free source code download](https://a.fsdn.com/allura/p/riotweb/icon?1612535234&w=90)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+themes template for riot single page app, develope modern web using riot
 
-### Markdown
+A features
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![single page app website free source code download](https://1.bp.blogspot.com/-06T7wjkv0sU/YB1Vt7DFwcI/AAAAAAAAMts/Ps1YOJN1VWsk9jqHZxy5JNgMJUHd2SfWACLcBGAsYHQ/s659/build%2Bsingle%2Bpage%2Bapp%2Bwith%2Briot%2Bfull%2Bsource%2Bcode%2B%25283%2529.png)
 
-```markdown
-Syntax highlighted code block
+Mobile view
 
-# Header 1
-## Header 2
-### Header 3
+![single page app website free source code download](https://1.bp.blogspot.com/-tG4lQ3afBlA/YB1Vt-B9IWI/AAAAAAAAMto/XD5IVEfZnbsUAMrGOM7vTADzzN9ZMJENQCLcBGAsYHQ/s1349/build%2Bsingle%2Bpage%2Bapp%2Bwith%2Briot%2Bfull%2Bsource%2Bcode%2B%25281%2529.png)
 
-- Bulleted
-- List
+Home page
 
-1. Numbered
-2. List
+![single page app website free source code download](https://1.bp.blogspot.com/-qYktMJT8C6w/YB1VvdM1uLI/AAAAAAAAMt4/m5PFvckRf2YhzOcGGgvUhYMR0HHy1VG6wCLcBGAsYHQ/s1348/build%2Bsingle%2Bpage%2Bapp%2Bwith%2Briot%2Bfull%2Bsource%2Bcode%2B%25286%2529.png)
 
-**Bold** and _Italic_ and `Code` text
+About Page
 
-[Link](url) and ![Image](src)
-```
+![single page app website free source code download](https://1.bp.blogspot.com/-d1IyrPWD4vk/YB1Vu_iYzbI/AAAAAAAAMt0/66EtrTbcjGk10eST4oZbjN9ZQEt8L8y8wCLcBGAsYHQ/s1349/build%2Bsingle%2Bpage%2Bapp%2Bwith%2Briot%2Bfull%2Bsource%2Bcode%2B%25285%2529.png)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Profile Page
 
-### Jekyll Themes
+![single page app website free source code download](https://1.bp.blogspot.com/-Lr4IJGUVCck/YB1VuGcHmZI/AAAAAAAAMtw/b-lwHVLVl0MulvVSkDgwkMq9wDTYWatvwCLcBGAsYHQ/s1350/build%2Bsingle%2Bpage%2Bapp%2Bwith%2Briot%2Bfull%2Bsource%2Bcode%2B%25284%2529.png)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mesinkasir/riotweb/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Gallery Page
 
-### Support or Contact
+---------------------------------
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+How to install :
+
+For first we need 
++ node / npm
++ riot
+
+then download this source code
+
+and run npm i && npm start
+
+for documentation installation :
+
+[https://www.hockeycomputindo.com/2021/02/how-to-create-single-app-website-using.html](https://www.hockeycomputindo.com/2021/02/how-to-create-single-app-website-using.html)
+
+or play video installation :
+
+[view video](https://youtu.be/9sWY3KUMBGE)
+
